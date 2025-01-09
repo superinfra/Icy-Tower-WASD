@@ -154,11 +154,11 @@ keyboardEvents.forEach((eventString)=>{
   document.addEventListener(eventString, (e)=>{
     let state = e.type === 'keydown'; // Check if the event type is keydown
     
-    if (e.keyCode == 39) {
+    if (e.keyCode == 39 || e.keyCode == 100) {
       keyboard.right = state; // Set the right property of the keyboard object based on the key state
-    } else if (e.keyCode == 37) {
+    } else if (e.keyCode == 37 || e.keyCode == 97) {
       keyboard.left = state; // Set the left property of the keyboard object based on the key state
-    } else if (e.keyCode == 38) {
+    } else if (e.keyCode == 38 || e.keyCode == 119) {
       keyboard.up = state; // Set the up property of the keyboard object based on the key state
       e.preventDefault(); // Prevent the default key up behavior (e.g., scrolling)
     }
